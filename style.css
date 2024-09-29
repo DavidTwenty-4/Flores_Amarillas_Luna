@@ -1,0 +1,127 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    min-height: 100vh; /* Asegura que el contenido siempre ocupe el 100% de la altura de la ventana */
+    overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
+}
+
+h2 {
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+#playButton {
+    background-color: #ff5e00;
+    color: white;
+    border: 2px solid #ffbb00;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    outline: none;
+    margin-bottom: 30px; /* Separación del botón respecto a la flor */
+}
+
+#playButton:hover {
+    background-color: #ffbb00;
+    color: #ff5e00;
+    border-color: #ff5e00;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#playButton:active {
+    background-color: #ff5e00;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra la flor horizontalmente */
+    align-items: center;
+    flex-direction: column; /* Coloca la flor en una columna */
+    height: 100%; /* Usa toda la altura disponible */
+}
+
+.flower-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 200px; /* Ajustar según el tamaño deseado */
+    width: 200px;
+}
+
+.flower {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate-flower 10s linear infinite;
+}
+
+@keyframes rotate-flower {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mid {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #000, #ff5e00, #000);
+    z-index: 4;
+    background-size: 5px 5px;
+    filter: drop-shadow(0 0 8px #682600);
+}
+
+.Petal1, .Petal2, .Petal3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px #e05200);
+}
+
+.Petal1 {
+    width: 120px;
+    height: 30px;
+    background: radial-gradient(circle, #ff5e00, #ffbb00);
+}
+
+.Petal2, .Petal3 {
+    width: 200px;
+    height: 40px;
+    background: radial-gradient(circle, #ff5e00, #fbd702);
+}
+
+.Petal1.p1 { transform: rotate(22.5deg); }
+.Petal1.p2 { transform: rotate(67.5deg); }
+.Petal1.p3 { transform: rotate(110.5deg); }
+.Petal1.p4 { transform: rotate(157.5deg); }
+
+.Petal2.p1 { transform: rotate(22.5deg); }
+.Petal2.p2 { transform: rotate(90deg); }
+.Petal2.p3 { transform: rotate(45deg); }
+.Petal2.p4 { transform: rotate(135deg); }
+
+.Petal3.p1 { transform: rotate(22.5deg); }
+.Petal3.p2 { transform: rotate(67.5deg); }
+.Petal3.p3 { transform: rotate(110.5deg); }
+.Petal3.p4 { transform: rotate(157.5deg); }
